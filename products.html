@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Product - KANCHUKA Cream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#1A1A1A',
+                            cream: '#F9F7F2',
+                            sage: '#8A9A5B',
+                            accent: '#C5A065'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300 py-4 top-0">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-serif font-bold text-brand-dark tracking-widest hover:text-brand-gold transition-colors">
+                KANCHUKA
+            </a>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="text-brand-dark hover:text-brand-gold font-medium transition-colors">Home</a>
+                <a href="products.html" class="text-brand-gold font-bold transition-colors">Products</a>
+                <a href="about.html"
+                    class="text-brand-dark hover:text-brand-gold font-medium transition-colors">About</a>
+                <a href="contact.html"
+                    class="bg-brand-gold text-white px-6 py-2 rounded-full font-medium hover:bg-brand-dark transition-all duration-300 shadow-md">
+                    Order Now
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 px-6 flex flex-col space-y-4">
+            <a href="index.html" class="text-brand-dark font-medium hover:text-brand-gold">Home</a>
+            <a href="products.html" class="text-brand-gold font-bold">Products</a>
+            <a href="about.html" class="text-brand-dark font-medium hover:text-brand-gold">About</a>
+            <a href="contact.html" class="text-brand-dark font-bold">Order Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-12">
+        <div class="container mx-auto px-6">
+
+            <!-- Breadcrumbs -->
+            <nav class="text-gray-500 text-sm mb-8" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="hover:text-brand-gold">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span class="text-gray-800 font-semibold">KANCHUKA Cream 50ml</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <!-- Product Image Gallery -->
+                <div class="space-y-4">
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-w-4 aspect-h-3 group">
+                        <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1887&auto=format&fit=crop"
+                            alt="Kanchuka Cream Premium Jar"
+                            class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1780&auto=format&fit=crop"
+                            class="rounded-lg shadow hover:opacity-75 cursor-pointer transition">
+                        <img src="https://images.unsplash.com/photo-1556228720-1987df156b85?q=80&w=1887&auto=format&fit=crop"
+                            class="rounded-lg shadow hover:opacity-75 cursor-pointer transition">
+                        <img src="https://images.unsplash.com/photo-1612817288484-9660c989716d?q=80&w=1887&auto=format&fit=crop"
+                            class="rounded-lg shadow hover:opacity-75 cursor-pointer transition">
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-4">KANCHUKA Signature Cream
+                    </h1>
+                    <div class="flex items-center mb-4">
+                        <div class="text-brand-gold flex text-lg">
+                            ★★★★★
+                        </div>
+                        <span class="text-gray-500 ml-2 text-sm">(2,548 Reviews)</span>
+                    </div>
+
+                    <p class="text-3xl font-bold text-brand-gold mb-6">LKR 9,500 <span
+                            class="text-lg font-normal text-gray-500 line-through ml-2">LKR 12,000</span></p>
+
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Embrace the luxury of pure botanical extracts. KANCHUKA Signature Cream is designed to penetrate
+                        deep into the skin layers, providing intense hydration and restoring your natural glow. Perfect
+                        for all skin types, this non-greasy formula absorbs instantly.
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center">
+                            <span
+                                class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            <span class="font-medium text-gray-700">100% Organic Ingredients</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            <span class="font-medium text-gray-700">Paraben & Sulfate Free</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span
+                                class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            <span class="font-medium text-gray-700">Cruelty Free</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                            <input type="text" value="1"
+                                class="w-10 text-center border-none focus:ring-0 text-gray-800 font-bold" readonly>
+                            <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                        </div>
+                        <span class="text-sm text-green-600 font-medium">In Stock - Ready to Ship</span>
+                    </div>
+
+                    <a href="contact.html"
+                        class="block w-full text-center bg-brand-dark text-white text-lg font-bold py-4 rounded-lg hover:bg-brand-gold transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                        Buy Now
+                    </a>
+
+                    <p class="text-center text-xs text-gray-500 mt-4">Free shipping island-wide for orders over LKR
+                        15,000</p>
+                </div>
+            </div>
+
+            <!-- Ingredients / Tabs -->
+            <div class="mt-20">
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                        <a href="#"
+                            class="border-brand-gold text-brand-gold whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            Description
+                        </a>
+                        <a href="#"
+                            class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            Ingredients
+                        </a>
+                        <a href="#"
+                            class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            How to Use
+                        </a>
+                    </nav>
+                </div>
+                <!-- Tab Content -->
+                <div class="py-8 text-gray-600 leading-relaxed max-w-3xl">
+                    <p class="mb-4">
+                        Our flagship product, the Kanchuka Cream, is the result of years of research and dedication to
+                        natural beauty. Infused with rare saffron extracts and wild honey, it targets dullness and
+                        pigmentation at the source.
+                    </p>
+                    <p>
+                        With regular use, you will notice a significant improvement in skin texture and tone. The
+                        lightweight formula ensures that your pores can breathe while receiving the nourishment they
+                        need.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <span class="text-2xl font-serif font-bold text-brand-gold">KANCHUKA</span>
+                <p class="text-gray-500 text-sm mt-2">© 2024 Kanchuka Cream. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <!-- Social Icons -->
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
